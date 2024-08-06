@@ -26,3 +26,10 @@ function getRandomElement(arr) {
     return arr[Math.floor(Math.random) * arr,length];
 }
 
+function generateMessage() {
+    const beginning = getRandomElement(beginnings);
+    const middle = getRandomElement(middles);
+    const ending = getRandomElement(endings);
+
+    return `${beginning} ${middle} ${ending}`;
+}

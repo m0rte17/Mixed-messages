@@ -22,6 +22,20 @@ const endings = [
     "and turn your dreams into reality."
 ];
 
+const ansiArt = `
+ /$$      /$$                  /$$$$$$  /$$                       /$$                                             /$$      
+| $$$    /$$$                 /$$__  $$|__/                      | $$                                            | $$      
+| $$$$  /$$$$ /$$   /$$      | $$  \__/ /$$  /$$$$$$   /$$$$$$$ /$$$$$$         /$$  /$$  /$$  /$$$$$$   /$$$$$$ | $$   /$$
+| $$ $$/$$ $$| $$  | $$      | $$$$    | $$ /$$__  $$ /$$_____/|_  $$_/        | $$ | $$ | $$ /$$__  $$ /$$__  $$| $$  /$$/
+| $$  $$$| $$| $$  | $$      | $$_/    | $$| $$  \__/|  $$$$$$   | $$          | $$ | $$ | $$| $$  \ $$| $$  \__/| $$$$$$/ 
+| $$\  $ | $$| $$  | $$      | $$      | $$| $$       \____  $$  | $$ /$$      | $$ | $$ | $$| $$  | $$| $$      | $$_  $$ 
+| $$ \/  | $$|  $$$$$$$      | $$      | $$| $$       /$$$$$$$/  |  $$$$/      |  $$$$$/$$$$/|  $$$$$$/| $$      | $$ \  $$
+|__/     |__/ \____  $$      |__/      |__/|__/      |_______/    \___/         \_____/\___/  \______/ |__/      |__/  \__/
+              /$$  | $$                                                                                                    
+             |  $$$$$$/                                                                                                    
+              \______/                                                                                                     
+`;
+
 function getRandomElement(arr) {
     return arr[Math.floor(Math.random()) * arr.length];
 }
@@ -31,7 +45,8 @@ function generateMessage() {
     const middle = getRandomElement(middles);
     const ending = getRandomElement(endings);
 
-    return `${beginning} ${middle} ${ending}`;
+    return `${beginning} ${middle} ${ending} 
+    ${ansiArt}`;
 }
 
 console.log(generateMessage());

@@ -23,7 +23,7 @@ const endings = [
 ];
 
 function getRandomElement(arr) {
-    return arr[Math.floor(Math.random) * arr,length];
+    return arr[Math.floor(Math.random()) * arr.length];
 }
 
 function generateMessage() {
@@ -33,3 +33,5 @@ function generateMessage() {
 
     return `${beginning} ${middle} ${ending}`;
 }
+
+console.log(generateMessage());
